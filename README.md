@@ -3,7 +3,7 @@ little side projet to humiliate one friend
 
 Simple Sudoku Solver using Backtracking
 
-gcc sudoku.c -o solver
+gcc sudoku.c -o solver <br>
 ./solver
 
 To change the grid: <br>
