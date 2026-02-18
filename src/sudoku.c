@@ -3,29 +3,30 @@
 
 
 int grid[SIZE][SIZE] = {
-    {1,0,0,0,0,7,0,9,0},
-    {0,3,0,0,2,0,4,0,8},
-    {0,0,9,6,0,0,5,0,0},
-    {0,0,5,3,0,0,9,0,0},
-    {0,1,0,0,8,0,0,0,2},
-    {6,0,0,0,0,4,0,0,0},
-    {3,0,8,0,0,0,1,0,0},
-    {0,4,0,0,0,0,0,0,7},
-    {0,0,7,0,0,0,3,0,0}
+    {1,0,0, 0,0,7, 0,9,0},
+    {0,3,0, 0,2,0, 4,0,8},
+    {0,0,9, 6,0,0, 5,0,0},
+    
+    {0,0,5, 3,0,0, 9,0,0},
+    {0,1,0, 0,8,0, 0,0,2},
+    {6,0,0, 0,0,4, 0,0,0},
+    
+    {3,0,8, 0,0,0, 1,0,0},
+    {0,4,0, 0,0,0, 0,0,7},
+    {0,0,7, 0,0,0, 3,0,0}
 };
 
 
 int main(){
     
-    //printGrid(grid);
-    // isCorrect(grid,1,0,0);
-    //findEmpty(grid,col,ligne);
-    //printGrid(grid);
+    printf("Input:\n");
+    printGrid(grid);
+    
     if (solve(grid)) {
-        printf("Solution trouvée :\n");
+        printf("\nOutput:\n");
         printGrid(grid);
     } else {
-        printf("Aucune solution possible.\n");
+        printf("No solution found\n");
     }
     return 0;
 }
@@ -60,8 +61,6 @@ int findEmpty(int grid[SIZE][SIZE], int *col, int *ligne){
 
     for(int i = 0; i<SIZE; i++){
         for(int j = 0; j<SIZE; j++){
-            //printf("(i,j) = (%d,%d)\n",i,j);
-            //printf("grid[i][j] = %d\n",grid[i][j]);
             if(grid[i][j] == 0){
                 *ligne = i;
                 *col = j;
