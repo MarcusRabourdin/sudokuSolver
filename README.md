@@ -72,7 +72,7 @@ int grid[SIZE][SIZE] = {
 ```bash
 make       # Compile the program
 make run   # Compile and run
-make clean # Remove the executable
+make clean # Remove the trashfiles
 ```
 
 ---
